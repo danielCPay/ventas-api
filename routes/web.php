@@ -24,7 +24,9 @@ $router->post('/producto/agregar', 'Mantenedores\ProductoController@Insertar_Act
 $router->put('/producto/modificar', 'Mantenedores\ProductoController@Insertar_Actualizar');
 $router->get('/producto/topproductos', 'Mantenedores\ProductoController@TopProductos');
 $router->get('/producto/obtener', 'Mantenedores\ProductoController@Obtener_Producto');
+$router->get('/producto/obtener/codigobarra', 'Mantenedores\ProductoController@Obtener_Producto_CodigoBarra');
 $router->put('/producto/anular', 'Mantenedores\ProductoController@Anular');
+$router->get('/presentacion/precios/codigo', 'Mantenedores\ProductoController@Obtener_Presentacion_Codigo');
 
 //subFamilia
 $router->get('/subfamilia/desplegable', 'Mantenedores\SubFamiliaController@SubFamilia_Desplegable');

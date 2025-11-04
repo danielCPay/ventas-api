@@ -73,4 +73,10 @@ class ProductoLogic
         return new RespuestaOperacion($resultado, $mensaje, $exito);
 
     }
+    public static function Obtener_Presentacion_Codigo(String $codigo): RespuestaOperacion
+    {
+        $resultado = ProductoModel::Obtener_Presentacion_Codigo($codigo);
+        if(General::isEmpty($resultado)){$resultado=NULL;}
+        return new RespuestaOperacion($resultado);
+    }
 }

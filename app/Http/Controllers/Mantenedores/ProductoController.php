@@ -117,4 +117,18 @@ class ProductoController extends Controller
         }
         return RespuestaOperacion::enviarJsonObj($res);
     }
+
+    public function Obtener_Presentacion_Codigo(Request $request)
+    {
+        $res = new RespuestaOperacion();
+        try {
+            $datos = (array)$request->input();
+            $codigo = $datos['codigo'];
+            $res = ProductoLogic::Obtener_Presentacion_Codigo($codigo);
+        } catch (\Exception $e) {
+            $res->mensaje = "Error no especificado";
+            $res->exito = false;
+        }
+        return RespuestaOperacion::enviarJsonObj($res);
+    }
 }

@@ -97,5 +97,14 @@ class ProductoModel
 		$res = DB::select("CALL sp_producto_anular(?,?)",$parametros);
 		return $res[0] ?? null;
 	}
+	public static function Obtener_Presentacion_Codigo($codigo): Object
+	{
+		$parametros = array(
+			$codigo			
+		);
+		$res = DB::select("CALL sp_obtener_presentacion_codigo(?)",$parametros);
+	
+		return $res[0] ?? new \stdClass();
+	}
 
 }
