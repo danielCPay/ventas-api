@@ -27,6 +27,7 @@ $router->get('/producto/obtener', 'Mantenedores\ProductoController@Obtener_Produ
 $router->get('/producto/obtener/codigobarra', 'Mantenedores\ProductoController@Obtener_Producto_CodigoBarra');
 $router->put('/producto/anular', 'Mantenedores\ProductoController@Anular');
 $router->get('/presentacion/precios/codigo', 'Mantenedores\ProductoController@Obtener_Presentacion_Codigo');
+$router->get('/imprimir-codigos', 'BarcodeController@imprimirCodigos');
 
 //subFamilia
 $router->get('/subfamilia/desplegable', 'Mantenedores\SubFamiliaController@SubFamilia_Desplegable');
@@ -185,7 +186,7 @@ $router->post('/notaingreso/agregar', 'Almacen\NotaIngresoController@Insertar_Ac
 $router->put('/notaingreso/modificar', 'Almacen\NotaIngresoController@Insertar_Actualizar');
 $router->get('/notaingreso/numeracionnotaingreso', 'Almacen\NotaIngresoController@NumeracionNotaIngreso');
 $router->put('/notaingreso/anular', 'Almacen\NotaIngresoController@AnularNontaIngreso');
-$router->get('/notaingreso/detellenotaingreso', 'Almacen\NotaIngresoController@ObtenerDetalleNotaIngresoId'); 
+$router->get('/notaingreso/detellenotaingreso', 'Almacen\NotaIngresoController@ObtenerDetalleNotaIngresoId');
 $router->put('/notaingreso/anulardetalle', 'Almacen\NotaIngresoController@AnularNotaIngresoDetalle');
 
 //movimientos
